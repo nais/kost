@@ -3,3 +3,6 @@ pin = true
 
 [tools]
 go = "1.24.0"
+
+[tasks.local]
+run = "go run main.go"
