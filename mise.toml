@@ -6,3 +6,12 @@ go = "1.24.0"
 
 [tasks.local]
 run = "go run main.go"
+
+[tasks.test]
+wait_for = ['fmt']
+description = "Run tests"
+run = "go test ./... -v"
+
+[tasks.fmt]
+description = "Format all go code using gofumpt"
+run = "go tool mvdan.cc/gofumpt -w ./"
